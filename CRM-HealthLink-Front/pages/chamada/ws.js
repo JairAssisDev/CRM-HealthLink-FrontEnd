@@ -5,7 +5,7 @@ class WsConnFac {
 
     static createClient(){
         WsConnFac.client = new StompJs.Client({
-            brokerURL: `${IP}?token=${localStorage.getItem("token")}`,
+            brokerURL: `${IP}/ws?token=${localStorage.getItem("token")}`,
           connectHeaders: {
             login: 'user',
             passcode: 'password'
